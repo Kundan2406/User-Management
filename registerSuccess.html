@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./css/stylesheet.css" />
+      <script src="./js/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+      <script>
+         $(document).ready(function () {
+             var getfullname = JSON.parse(localStorage.getItem("users"));
+             var username = getfullname[0].fullname;
+             console.log(username);
+         
+             document.getElementById("myText").innerHTML = username;
+         });
+      </script>
+   </head>
+   <body>
+      <div class="container main-container">
+         <div class="register-success">
+            <h1><span id="myText"></span> Registered Successfully</h1>
+            <p>Thank you for registration</p>
+            <a href="./login.html" class="btn btn-primary">Click here to continue to Login Page</a>
+         </div>
+      </div>
+   </body>
+</html>
